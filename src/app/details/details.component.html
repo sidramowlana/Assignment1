@@ -1,0 +1,22 @@
+<button
+class="btn btn-primary"
+(click)="toggleDetails()">
+Display Details
+</button>
+
+<p *ngIf="detailsShow">Secret password = Tuna</p>
+<!-- <div class ="container">
+  <p *ngFor="let item of detailsArray"
+  [ngStyle]="{backgroundColor: item>=5 ? 'blue':'transparent'}"
+  [ngClass]="{whiteText: item>=5}"
+  >{{item}}</p>
+</div> -->
+
+<!-- index is an inbuilt variable that defines the position in an array -->
+<div class ="container">
+  <p *ngFor="let item of detailsArray; let i =index"
+  [ngStyle]="{backgroundColor: i>=5 ? 'blue':'transparent'}"
+  [ngClass]="{whiteText: i>=5}"
+  >{{item}}</p>
+</div>
+
